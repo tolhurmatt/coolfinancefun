@@ -68,9 +68,11 @@ df = df.drop(columns=['Unnamed: 8'])
 
 st.title('Individual Annual Salaries at the University of Washington 2012-2021')
 
+generate_plot3(df)
+
 generate_plot2(df)
 
-generate_plot3(df)
+
 # Streamlit code to display the plot        
 
 
