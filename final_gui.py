@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import streamlit as st
+import altair as alt
 
 # Make the layout wider
 st.set_page_config(layout="wide")
@@ -187,11 +188,6 @@ with tab2:
     st.subheader('The Plot')
     st.write('The bar plots generated represent historical average annual costs spent by an individual living in Seattle for common costs: rent, groceries, restaurants/eating out, basic utilities (water, heating, electricity), internet (assuming unlimited data, 60 mbps).')
     st.write('The star points generated represents the annual salary of the selected job type, and is stacked on the same plot as the costs. This allows for comparison in how the essential costs vs. income change over time for the same job. *Other costs such as leisure spending, transportation, medical, retirement, are not considered.*')
-
-
-    import altair as alt
-    import pandas as pd
-    import streamlit as st
 
     # Cost values
     data = pd.read_csv("annual_costs.csv")
